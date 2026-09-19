@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/typemaster-logo.png"
+    >
+
+    <title>Statistics - TypeMaster</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- Statistics CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/statistics.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+
+            <i class="bi bi-keyboard-fill"></i>
+
+            TypeMaster
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="test.html"
+                    >
+
+                        Typing Test
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="statistics.html"
+                    >
+
+                        Statistics
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="achievements.html"
+                    >
+
+                        Achievements
+
+                    </a>
+
+                </li>
+
+
+                <!-- THEME -->
+
+                <li class="nav-item ms-lg-2">
+
+                    <button
+                        class="btn theme-toggle"
+                        id="themeToggle"
+                        type="button"
+                    >
+
+                        <i class="bi bi-moon-fill"></i>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="statistics-page">
+
+    <div class="container">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading text-center">
+
+            <span class="section-label">
+
+                YOUR PERFORMANCE
+
+            </span>
+
+            <h1>
+
+                Typing Statistics
+
+            </h1>
+
+            <p>
+
+                Track your progress and see how your typing
+                performance improves over time.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================
+             SUMMARY CARDS
+        ====================================== -->
+
+        <div class="row g-4 mb-5">
+
+
+            <!-- BEST WPM -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="bi bi-speedometer2"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+
+                            Best WPM
+
+                        </span>
+
+                        <h2 id="bestWpm">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AVERAGE WPM -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="bi bi-graph-up"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+
+                            Average WPM
+
+                        </span>
+
+                        <h2 id="averageWpm">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BEST ACCURACY -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+
+                            Best Accuracy
+
+                        </span>
+
+                        <h2 id="bestAccuracy">
+
+                            0%
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TESTS -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="bi bi-check2-circle"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+
+                            Tests Completed
+
+                        </span>
+
+                        <h2 id="testsCompleted">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             CHART
+        ====================================== -->
+
+        <div class="statistics-card mb-5">
+
+            <div class="card-header-custom">
+
+                <div>
+
+                    <h3>
+
+                        WPM Progress
+
+                    </h3>
+
+                    <p>
+
+                        Your latest typing test performance
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <canvas id="wpmChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             OVERALL PERFORMANCE
+        ====================================== -->
+
+        <div class="statistics-card mb-5">
+
+            <div class="card-header-custom">
+
+                <div>
+
+                    <h3>
+
+                        Overall Performance
+
+                    </h3>
+
+                    <p>
+
+                        Your complete typing activity
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- CHARACTERS -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="detail-stat">
+
+                        <i class="bi bi-type"></i>
+
+                        <span>
+
+                            Total Characters
+
+                        </span>
+
+                        <strong id="totalCharacters">
+
+                            0
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MISTAKES -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="detail-stat">
+
+                        <i class="bi bi-x-circle"></i>
+
+                        <span>
+
+                            Total Mistakes
+
+                        </span>
+
+                        <strong id="totalMistakes">
+
+                            0
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACCURACY -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="detail-stat">
+
+                        <i class="bi bi-crosshair"></i>
+
+                        <span>
+
+                            Average Accuracy
+
+                        </span>
+
+                        <strong id="averageAccuracy">
+
+                            0%
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FASTEST -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="detail-stat">
+
+                        <i class="bi bi-lightning-charge"></i>
+
+                        <span>
+
+                            Fastest Test
+
+                        </span>
+
+                        <strong id="fastestTest">
+
+                            0 WPM
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             PERSONAL BEST
+        ====================================== -->
+
+        <div class="statistics-card personal-best-card mb-5">
+
+            <div class="personal-best-content">
+
+                <div class="personal-best-icon">
+
+                    <i class="bi bi-trophy-fill"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+
+                        PERSONAL BEST
+
+                    </span>
+
+                    <h2 id="personalBestWpm">
+
+                        0 WPM
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             RECENT TESTS
+        ====================================== -->
+
+        <div class="statistics-card">
+
+            <div class="card-header-custom">
+
+                <div>
+
+                    <h3>
+
+                        Recent Tests
+
+                    </h3>
+
+                    <p>
+
+                        Your latest typing sessions
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table recent-tests-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>WPM</th>
+
+                            <th>Accuracy</th>
+
+                            <th>Mistakes</th>
+
+                            <th>Characters</th>
+
+                            <th>Difficulty</th>
+
+                            <th>Duration</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="recentTestsBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             EMPTY STATE
+        ====================================== -->
+
+        <div
+            id="emptyState"
+            class="empty-state d-none"
+        >
+
+            <div class="empty-icon">
+
+                <i class="bi bi-bar-chart"></i>
+
+            </div>
+
+
+            <h3>
+
+                No tests yet
+
+            </h3>
+
+
+            <p>
+
+                Complete your first typing test
+                to see your statistics here.
+
+            </p>
+
+
+            <a
+                href="test.html"
+                class="btn btn-primary"
+            >
+
+                <i class="bi bi-keyboard"></i>
+
+                Start Typing
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container text-center">
+
+        <p>
+
+            © 2026 TypeMaster. All rights reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     BOOTSTRAP JS
+========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =========================================
+     CHART.JS
+========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+
+<script src="js/config.js"></script>
+
+<!-- =========================================
+     MAIN JS
+========================================= -->
+
+<script src="js/main.js"></script>
+
+
+
+<!-- =========================================
+     STATISTICS JS
+========================================= -->
+
+<script src="js/statistics.js"></script>
+
+
+</body>
+
+</html>

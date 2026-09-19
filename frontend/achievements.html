@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Achievements - TypeMaster</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Achievements CSS -->
+    <link rel="stylesheet" href="css/achievements.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-keyboard-fill"></i>
+                TypeMaster
+            </a>
+
+            <div class="ms-auto" id="authArea">
+                <!-- Filled by main.js -->
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="achievements-page">
+
+        <div class="container">
+
+            <!-- Page Header -->
+
+            <div class="achievements-header text-center">
+
+                <div class="achievement-title-icon">
+                    <i class="bi bi-trophy-fill"></i>
+                </div>
+
+                <h1>Achievements</h1>
+
+                <p>
+                    Complete typing challenges and unlock achievements.
+                </p>
+
+            </div>
+
+
+            <!-- ================================
+                 SUMMARY
+            ================================= -->
+
+            <div class="row g-4 achievement-summary">
+
+                <!-- Total -->
+
+                <div class="col-md-4">
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Total Achievements</span>
+                            <strong id="totalAchievements">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Unlocked -->
+
+                <div class="col-md-4">
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon">
+                            <i class="bi bi-unlock-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Unlocked</span>
+                            <strong id="unlockedAchievements">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="col-md-4">
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+
+                        <div class="summary-progress">
+
+                            <span>Progress</span>
+
+                            <strong id="achievementProgress">
+                                0%
+                            </strong>
+
+                            <div class="progress">
+
+                                <div
+                                    id="achievementProgressBar"
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="width: 0%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 CURRENT STATS
+            ================================= -->
+
+            <div class="current-stats">
+
+                <div class="section-heading">
+
+                    <h2>Your Progress</h2>
+
+                    <p>
+                        Your current typing performance.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+                    <div class="col-6 col-md-3">
+
+                        <div class="mini-stat">
+
+                            <i class="bi bi-keyboard-fill"></i>
+
+                            <span>Tests</span>
+
+                            <strong id="testsCompleted">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-md-3">
+
+                        <div class="mini-stat">
+
+                            <i class="bi bi-speedometer2"></i>
+
+                            <span>Best WPM</span>
+
+                            <strong id="bestWpm">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-md-3">
+
+                        <div class="mini-stat">
+
+                            <i class="bi bi-bullseye"></i>
+
+                            <span>Best Accuracy</span>
+
+                            <strong id="bestAccuracy">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6 col-md-3">
+
+                        <div class="mini-stat">
+
+                            <i class="bi bi-trophy-fill"></i>
+
+                            <span>Unlocked</span>
+
+                            <strong id="miniUnlocked">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 ACHIEVEMENT LIST
+            ================================= -->
+
+            <div class="achievements-section">
+
+                <div class="section-heading">
+
+                    <h2>All Achievements</h2>
+
+                    <p>
+                        Keep typing to unlock them all.
+                    </p>
+
+                </div>
+
+
+                <!-- Loading -->
+
+                <div
+                    id="loadingState"
+                    class="achievement-state"
+                >
+
+                    <div
+                        class="spinner-border"
+                        role="status"
+                    ></div>
+
+                    <p>
+                        Loading achievements...
+                    </p>
+
+                </div>
+
+
+                <!-- Error -->
+
+                <div
+                    id="errorState"
+                    class="achievement-state d-none"
+                >
+
+                    <div class="state-icon">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+
+                    <h3>Unable to load achievements</h3>
+
+                    <p id="errorMessage">
+                        Something went wrong.
+                    </p>
+
+                    <button
+                        id="retryButton"
+                        class="btn btn-primary"
+                    >
+                        <i class="bi bi-arrow-clockwise"></i>
+                        Try Again
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+
+                <div
+                    id="loginState"
+                    class="achievement-state d-none"
+                >
+
+                    <div class="state-icon">
+                        <i class="bi bi-person-lock"></i>
+                    </div>
+
+                    <h3>Login Required</h3>
+
+                    <p>
+                        Login to view and unlock your achievements.
+                    </p>
+
+                    <a
+                        href="login.html"
+                        class="btn btn-primary"
+                    >
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        Login
+                    </a>
+
+                </div>
+
+
+                <!-- Achievement Cards -->
+
+                <div
+                    id="achievementsGrid"
+                    class="row g-4 d-none"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="js/config.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Achievements JS -->
+    <script src="js/achievements.js"></script>
+
+</body>
+
+</html>

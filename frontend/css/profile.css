@@ -1,0 +1,857 @@
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.profile-page {
+    padding: 70px 0;
+    min-height: calc(100vh - 150px);
+}
+
+
+/* =========================================
+   PROFILE HEADER
+========================================= */
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.profile-header .section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 10px 0;
+    color: var(--text);
+}
+
+.profile-header p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    padding: 35px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================
+   PROFILE AVATAR
+========================================= */
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--primary);
+
+    font-size: 2.5rem;
+}
+
+
+/* =========================================
+   USERNAME
+========================================= */
+
+.profile-card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    margin-bottom: 5px;
+
+    color: var(--text);
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.profile-card > p {
+    color: var(--muted);
+
+    margin-bottom: 25px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   MEMBER SINCE
+========================================= */
+
+.profile-member {
+    padding: 15px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+.profile-member i {
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.profile-member strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PERFORMANCE CARD
+========================================= */
+
+.profile-statistics {
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.06);
+}
+
+.profile-statistics h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    color: var(--text);
+}
+
+
+/* =========================================
+   STAT BOX
+========================================= */
+
+.profile-stat {
+    min-height: 130px;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-stat:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.profile-stat i {
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.profile-stat span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.profile-stat strong {
+    color: var(--text);
+
+    font-size: 1.6rem;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   EDIT PROFILE
+========================================= */
+
+.edit-profile-card {
+    margin-top: 24px;
+}
+
+.edit-profile-card .form-label {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.edit-profile-card .form-control {
+    height: 48px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border-color: var(--border);
+
+    border-radius: 10px;
+}
+
+.edit-profile-card .form-control::placeholder {
+    color: var(--muted);
+}
+
+.edit-profile-card .form-control:focus {
+    background: var(--surface);
+
+    color: var(--text);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.profile-card .btn {
+    height: 46px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .profile-card,
+body.dark-mode .profile-statistics {
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .profile-stat:hover {
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .profile-page {
+        padding: 55px 15px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .profile-page {
+        padding: 40px 15px;
+    }
+
+    .profile-header {
+        margin-bottom: 30px;
+    }
+
+    .profile-header h1 {
+        font-size: 2rem;
+    }
+
+    .profile-header p {
+        font-size: 0.9rem;
+    }
+
+    .profile-card,
+    .profile-statistics {
+        padding: 22px;
+    }
+
+    .profile-avatar {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+
+    .profile-stat {
+        min-height: 115px;
+        padding: 18px;
+    }
+
+    .profile-stat strong {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* =========================================
+   CHANGE PASSWORD
+========================================= */
+
+.profile-section {
+    margin-top: 30px;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: var(--card-bg, #ffffff);
+
+    border: 1px solid rgba(128, 128, 128, 0.15);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section .section-heading {
+    margin-bottom: 25px;
+}
+
+.profile-section .section-heading h2 {
+    font-size: 24px;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+.profile-section .section-heading p {
+    margin: 0;
+    opacity: 0.65;
+}
+
+
+/* Password fields */
+
+.password-field {
+    margin-bottom: 20px;
+}
+
+.password-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.password-field small {
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    opacity: 0.6;
+}
+
+
+/* Password input */
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper .form-control {
+    padding-right: 48px;
+
+    min-height: 48px;
+
+    border-radius: 10px;
+}
+
+
+/* Show / hide button */
+
+.password-toggle {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    border-radius: 8px;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+
+    background: rgba(128, 128, 128, 0.1);
+}
+
+
+/* Message */
+
+.password-message {
+    display: none;
+
+    padding: 11px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.password-message.success {
+    display: block;
+
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #16a34a;
+}
+
+.password-message.error {
+    display: block;
+
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #dc2626;
+}
+
+
+/* Button */
+
+#changePasswordButton {
+    min-height: 46px;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* Dark mode */
+
+body.dark-mode .profile-section {
+    background: rgba(30, 30, 40, 0.85);
+
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .profile-section {
+        padding: 22px 18px;
+    }
+
+    .profile-section .section-heading h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================
+   DATA MANAGEMENT / DANGER ZONE
+========================================= */
+
+.danger-zone {
+    margin-top: 30px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(239, 68, 68, 0.04);
+
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.danger-zone .section-heading {
+    margin-bottom: 25px;
+}
+
+.danger-zone .section-heading h2 {
+    color: #dc2626;
+
+    font-size: 24px;
+
+    font-weight: 750;
+
+    margin-bottom: 5px;
+}
+
+.danger-zone .section-heading h2 i {
+    margin-right: 7px;
+}
+
+.danger-zone .section-heading p {
+    margin: 0;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   DANGER ITEM
+========================================= */
+
+.danger-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background: var(--card-bg, #ffffff);
+
+    border: 1px solid rgba(239, 68, 68, 0.18);
+}
+
+.danger-info {
+    flex: 1;
+}
+
+.danger-info h3 {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.danger-info p {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    opacity: 0.7;
+}
+
+.danger-warning {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   CLEAR BUTTON
+========================================= */
+
+#clearHistoryButton {
+    flex-shrink: 0;
+
+    min-height: 44px;
+
+    padding: 9px 18px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.history-message {
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.history-message.success {
+    display: block;
+
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #16a34a;
+}
+
+.history-message.error {
+    display: block;
+
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+#clearHistoryModal .modal-content {
+    border: none;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+#clearHistoryModal .modal-header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+#clearHistoryModal .modal-title {
+    font-weight: 700;
+}
+
+#clearHistoryModal .modal-body {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .danger-zone {
+    background: rgba(239, 68, 68, 0.06);
+
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+body.dark-mode .danger-item {
+    background: rgba(30, 30, 40, 0.85);
+
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .danger-zone {
+        padding: 22px 18px;
+    }
+
+    .danger-item {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    #clearHistoryButton {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   DELETE ACCOUNT
+========================================= */
+
+.delete-account-item {
+    margin-top: 18px;
+
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+.delete-account-item h3 {
+    color: #dc2626;
+}
+
+
+/* =========================================
+   DELETE WARNING BOX
+========================================= */
+
+.delete-warning-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    background: rgba(239, 68, 68, 0.1);
+
+    color: #dc2626;
+}
+
+.delete-warning-box i {
+    font-size: 20px;
+}
+
+
+/* =========================================
+   DELETE ACCOUNT MESSAGE
+========================================= */
+
+.delete-account-message {
+    display: none;
+
+    margin-top: 12px;
+
+    padding: 10px 13px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+.delete-account-message.error {
+    display: block;
+
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   DELETE MODAL
+========================================= */
+
+#deleteAccountModal .modal-content {
+    border: none;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+#deleteAccountModal .modal-header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+#deleteAccountModal .modal-title {
+    font-weight: 700;
+}
+
+#deleteAccountModal .modal-body {
+    line-height: 1.6;
+}
+
+#deleteAccountModal ul {
+    padding-left: 22px;
+}
+
+#deleteAccountModal li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .delete-account-item {
+    background: rgba(30, 30, 40, 0.85);
+
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+body.dark-mode .delete-warning-box {
+    background: rgba(239, 68, 68, 0.12);
+}

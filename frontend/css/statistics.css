@@ -1,0 +1,725 @@
+/* =========================================
+   STATISTICS PAGE
+========================================= */
+
+.statistics-page {
+
+    padding:
+        65px 0
+        100px;
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.statistics-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.statistics-heading span {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.statistics-heading h1 {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin:
+        8px 0
+        10px;
+
+}
+
+
+.statistics-heading p {
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.statistics-card {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 23px;
+
+    height: 100%;
+
+}
+
+
+.statistics-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef2ff;
+
+    color: var(--primary);
+
+    border-radius: 11px;
+
+    font-size: 19px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.statistics-card span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.statistics-card strong {
+
+    display: block;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   CHART
+========================================= */
+
+.chart-card {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+.chart-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.chart-header h3 {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+.chart-header p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin:
+        4px 0 0;
+
+}
+
+
+.chart-header > span {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.chart-wrapper {
+
+    height: 300px;
+
+}
+
+
+/* =========================================
+   DETAIL CARDS
+========================================= */
+
+.detail-card {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    height: 100%;
+
+}
+
+
+.detail-card h3 {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+
+.detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.detail-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.detail-row span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.detail-row strong {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   PERSONAL BEST
+========================================= */
+
+.personal-best {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        10px 0
+        20px;
+
+}
+
+
+.trophy {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fef3c7;
+
+    color: #f59e0b;
+
+    font-size: 27px;
+
+}
+
+
+.personal-best span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.personal-best strong {
+
+    display: block;
+
+    font-size: 30px;
+
+    margin-top: 2px;
+
+}
+
+
+.best-message {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    background: #eef2ff;
+
+    color: #4338ca;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+}
+
+
+.best-message i {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================
+   RECENT TESTS
+========================================= */
+
+.recent-card {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+}
+
+
+.recent-header {
+
+    padding: 23px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.recent-header h3 {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+.recent-header p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin:
+        4px 0 0;
+
+}
+
+
+.clear-btn {
+
+    border:
+        1px solid var(--border);
+
+    background: transparent;
+
+    color: #ef4444;
+
+    padding:
+        8px 12px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.clear-btn:hover {
+
+    background: #fef2f2;
+
+}
+
+
+.table {
+
+    margin: 0;
+
+    color: var(--text);
+
+}
+
+
+.table th {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    padding:
+        15px 20px;
+
+    border-color: var(--border);
+
+}
+
+
+.table td {
+
+    font-size: 12px;
+
+    padding:
+        15px 20px;
+
+    border-color: var(--border);
+
+    vertical-align: middle;
+
+}
+
+
+.table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+.difficulty-badge {
+
+    display: inline-block;
+
+    padding:
+        4px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: capitalize;
+
+}
+
+
+.difficulty-easy {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+
+.difficulty-medium {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+}
+
+
+.difficulty-hard {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.empty-history {
+
+    text-align: center;
+
+    padding:
+        55px 20px;
+
+    display: none;
+
+}
+
+
+.empty-history i {
+
+    font-size: 40px;
+
+    color: var(--muted);
+
+}
+
+
+.empty-history h4 {
+
+    font-size: 16px;
+
+    margin:
+        12px 0 5px;
+
+}
+
+
+.empty-history p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .statistics-icon {
+
+    background: #1e1b4b;
+
+}
+
+
+body.dark-mode .best-message {
+
+    background: #1e1b4b;
+
+    color: #c7d2fe;
+
+}
+
+
+body.dark-mode .difficulty-easy {
+
+    background: #052e16;
+
+    color: #86efac;
+
+}
+
+
+body.dark-mode .difficulty-medium {
+
+    background: #451a03;
+
+    color: #fde68a;
+
+}
+
+
+body.dark-mode .difficulty-hard {
+
+    background: #450a0a;
+
+    color: #fca5a5;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .statistics-page {
+
+        padding:
+            45px 0
+            70px;
+
+    }
+
+
+    .statistics-heading h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .chart-card,
+    .detail-card {
+
+        padding: 18px;
+
+    }
+
+
+    .chart-wrapper {
+
+        height: 240px;
+
+    }
+
+
+    .recent-header {
+
+        padding: 18px;
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .clear-btn {
+
+        white-space: nowrap;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .statistics-card {
+
+        padding: 17px;
+
+    }
+
+
+    .statistics-card strong {
+
+        font-size: 25px;
+
+    }
+
+
+    .chart-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .recent-header {
+
+        flex-direction: column;
+
+    }
+
+}

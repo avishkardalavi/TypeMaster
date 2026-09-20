@@ -1,1 +1,1 @@
-window.API_BASE_URL = "http://localhost:5000/api";
+window.API_BASE_URL = "https://typemaster-backend-12gu.onrender.com/api";
